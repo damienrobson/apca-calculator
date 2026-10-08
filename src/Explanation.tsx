@@ -6,7 +6,7 @@ export default function Explanation() {
       aria-labelledby="apca-explanation-heading"
       className={styles.container}
     >
-      <details className={styles.details}>
+      <details className={styles.details} open>
         <summary id="apca-explanation-heading" className={styles.summary}>
           <span className={styles.title}>What do these results mean?</span>
           <span className={styles.chevron} aria-hidden="true" />
