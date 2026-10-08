@@ -4,7 +4,7 @@
 
 A web-based tool for calculating perceptual colour contrast using the **Accessible Perceptual Contrast Algorithm (APCA)**, the candidate contrast methodology proposed for the Web Content Accessibility Guidelines (WCAG 3).
 
-**Live Demo:** [apca-calculator.netlify.app](https://apca-calculator.netlify.app/)
+[**See it in action!**](https://apca-calculator.netlify.app/)
 
 ---
 
@@ -36,7 +36,7 @@ The **APCA Contrast Calculator** evaluates colour combinations through a percept
 
 ## Tech Stack
 
-- **Frontend:** HTML5, CSS3, JavaScript / TypeScript
+- **Frontend:** HTML5, CSS3, TypeScript
 - **Core Algorithm:** APCA / SAPC (Spatial Perceptual Contrast)
 - **Hosting & Deployment:** [Netlify](https://www.netlify.com/)
 
@@ -46,6 +46,14 @@ The **APCA Contrast Calculator** evaluates colour combinations through a percept
 
 - [Myndex / APCA Official Documentation](https://git.apcacontrast.com/documentation/)
 - [W3C WCAG 3.0 Draft Guidelines](https://www.w3.org/TR/wcag-3.0/)
+
+---
+
+## Supporting
+
+If you like the tool, [consider buying me a coffee](https://ko-fi.com/damienrobson)
+
+---
 
 ## License
 
