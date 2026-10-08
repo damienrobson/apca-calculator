@@ -1,32 +1,32 @@
 /* eslint-disable no-useless-assignment */
 // APCA Exponent: Standard Tone Response Curve (TRC) exponent simulating human display gamma (~2.4)
-const mainTRC = 2.4;
+export const mainTRC = 2.4;
 
 // sRGB Spectral Luminous Efficiency Coefficients based on CIE Y (standard sRGB primaries)
-const R_COEFFICIENT = 0.2126729; // Red weight in overall luminance perception
-const G_COEFFICIENT = 0.7151522; // Green weight in overall luminance perception (human eye is most sensitive to green)
-const B_COEFFICIENT = 0.072175; // Blue weight in overall luminance perception
+export const R_COEFFICIENT = 0.2126729; // Red weight in overall luminance perception
+export const G_COEFFICIENT = 0.7151522; // Green weight in overall luminance perception (human eye is most sensitive to green)
+export const B_COEFFICIENT = 0.072175; // Blue weight in overall luminance perception
 
 // Soft-clamp exponents for light-background/dark-text (Black-on-White mode)
-const normBG = 0.56; // Background luminance exponent for normal contrast polarity
-const normTXT = 0.57; // Text luminance exponent for normal contrast polarity
+export const normBG = 0.56; // Background luminance exponent for normal contrast polarity
+export const normTXT = 0.57; // Text luminance exponent for normal contrast polarity
 
 // Soft-clamp exponents for dark-background/light-text (White-on-Black mode)
-const revTXT = 0.62; // Text luminance exponent for reverse contrast polarity
-const revBG = 0.65; // Background luminance exponent for reverse contrast polarity
+export const revTXT = 0.62; // Text luminance exponent for reverse contrast polarity
+export const revBG = 0.65; // Background luminance exponent for reverse contrast polarity
 
 // Dark-flare compensation constants for low-luminance values
-const blkThreshold = 0.022; // Luminance threshold below which dark flare compensation kicks in
-const blkClamp = 1.414; // Power curve used to boost near-black values to model screen glare/flare
+export const blkThreshold = 0.022; // Luminance threshold below which dark flare compensation kicks in
+export const blkClamp = 1.414; // Power curve used to boost near-black values to model screen glare/flare
 
 // Scaling factors for light-mode vs dark-mode APCA contrast values
-const scaleBoW = 1.14; // Scaling factor for Black-on-White (normal polarity)
-const scaleWoB = 1.14; // Scaling factor for White-on-Black (reverse polarity)
+export const scaleBoW = 1.14; // Scaling factor for Black-on-White (normal polarity)
+export const scaleWoB = 1.14; // Scaling factor for White-on-Black (reverse polarity)
 
 // Soft-toe noise threshold (prevents tiny luminance differences from yielding false contrast)
 // "Soft-toe" refers to the gentle cut-off applied to low-contrast scenarios
-const loThreshold = 0.1; // Minimum raw SAPC threshold required to register meaningful contrast
-const loOffset = 0.027; // Baseline offset applied to smooth out low-contrast thresholds
+export const loThreshold = 0.1; // Minimum raw SAPC threshold required to register meaningful contrast
+export const loOffset = 0.027; // Baseline offset applied to smooth out low-contrast thresholds
 
 // Type definition restricting font weight to standard numerical CSS weights
 export type FontWeight = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
@@ -42,7 +42,7 @@ export interface ApcaValidationResult {
 /**
  * Calculates the perceptually adjusted APCA luminance (Y) from a 6-character hex color.
  */
-const calculateApcaLuminance = (hexColor: string): number => {
+export const calculateApcaLuminance = (hexColor: string): number => {
   // Strip the leading hash symbol if present
   const hex = hexColor.replace("#", "");
 
@@ -71,7 +71,7 @@ const calculateApcaLuminance = (hexColor: string): number => {
 /**
  * Evaluates the required minimum Lightness Contrast (|Lc|) based on font size and weight.
  */
-const getMinimumLcForFont = (
+export const getMinimumLcForFont = (
   fontSizePx: number,
   fontWeight: FontWeight,
 ): number => {

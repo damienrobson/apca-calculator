@@ -1,9 +1,10 @@
+/* eslint-disable no-useless-assignment */
 import {
   calculateApcaLuminance,
   normBG,
   normTXT,
   scaleBoW,
-  loThrs,
+  loThreshold,
   loOffset,
   revBG,
   revTXT,
@@ -35,7 +36,7 @@ export const calcAPCA = (txtColor: string, bgColor: string): number => {
     // Calculate raw SAPC contrast using light-mode power exponents and scale
     const SAPC = (bgY ** normBG - txtY ** normTXT) * scaleBoW;
     // Apply soft-toe noise cutoff: force to 0 if under threshold, otherwise subtract noise offset
-    Lc = SAPC < loThrs ? 0 : SAPC - loOffset;
+    Lc = SAPC < loThreshold ? 0 : SAPC - loOffset;
   }
 
   // Case 2: Reverse Polarity (Dark background, Light text)
@@ -43,7 +44,7 @@ export const calcAPCA = (txtColor: string, bgColor: string): number => {
     // Calculate raw SAPC contrast using dark-mode power exponents and scale
     const SAPC = (bgY ** revBG - txtY ** revTXT) * scaleWoB;
     // Apply soft-toe noise cutoff: force to 0 if under negative threshold, otherwise add noise offset
-    Lc = SAPC > -loThrs ? 0 : SAPC + loOffset;
+    Lc = SAPC > -loThreshold ? 0 : SAPC + loOffset;
   }
 
   // Multiply by 100 to convert to standard Lc scale (-108 to +106)
