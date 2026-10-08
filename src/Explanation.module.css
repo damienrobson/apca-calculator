@@ -1,0 +1,121 @@
+.container {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.details {
+  border: 1px solid #334155;
+  border-radius: 0.5rem;
+  background-color: #0f172a;
+  color: #f8fafc;
+  overflow: hidden;
+}
+
+.details[open] .chevron {
+  transform: rotate(180deg);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none; /* Hide default marker in supported browsers */
+  user-select: none;
+}
+
+/* Hide default disclosure triangle in Webkit browsers */
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: -2px;
+}
+
+.title {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.chevron {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid #94a3b8;
+  border-bottom: 2px solid #94a3b8;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease-in-out;
+  margin-left: 0.75rem;
+}
+
+.content {
+  padding: 0 1.25rem 1.25rem;
+  border-top: 1px solid #1e293b;
+  color: #cbd5e1;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.description {
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.subheading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin-bottom: 0.75rem;
+}
+
+.metricsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 0 1.25rem 0;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.term {
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.definition {
+  margin: 0;
+}
+
+.tierList {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tierItem {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.tierTag {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-family: monospace;
+  background-color: #1e293b;
+  color: #f1f5f9;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+}

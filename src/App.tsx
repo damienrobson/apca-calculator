@@ -1,6 +1,7 @@
 import { useEffect, useState, type ChangeEvent } from "react";
 import { isApcaAccessible, type FontWeight } from "./helpers";
 import styles from "./App.module.css";
+import Explanation from "./Explanation";
 
 interface ApcaResults {
   lc: number;
@@ -298,6 +299,8 @@ export default function App() {
           </div>
         </div>
       </div>
+
+      <Explanation />
     </main>
   );
 }
