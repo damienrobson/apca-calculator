@@ -280,21 +280,21 @@ export default function App() {
           <div className={styles.metricRow}>
             <span className={styles.metricLabel}>Lc Score</span>
             <span className={styles.metricValuePrimary}>
-              {apcaResults?.lc ?? "—"}
+              {apcaResults?.lc ?? "Unable to calculate"}
             </span>
           </div>
 
           <div className={styles.metricRow}>
             <span className={styles.metricLabel}>Min Required Lc</span>
             <span className={styles.metricValueSecondary}>
-              {apcaResults?.minRequiredLc ?? "—"}
+              {apcaResults?.minRequiredLc ?? "N/A"}
             </span>
           </div>
 
           <div className={styles.metricRow}>
             <span className={styles.metricLabel}>Recommended Role</span>
             <span className={styles.roleTag}>
-              {apcaResults?.recommendedRole ?? "—"}
+              {apcaResults?.recommendedRole ?? "None"}
             </span>
           </div>
         </div>

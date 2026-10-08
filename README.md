@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://apca-calculator.netlify.app/)
 
-A web-based tool for calculating perceptual colour contrast using the **Accessible Perceptual Contrast Algorithm (APCA)**—the candidate contrast methodology proposed for the Web Content Accessibility Guidelines (WCAG 3).
+A web-based tool for calculating perceptual colour contrast using the **Accessible Perceptual Contrast Algorithm (APCA)**, the candidate contrast methodology proposed for the Web Content Accessibility Guidelines (WCAG 3).
 
 **Live Demo:** [apca-calculator.netlify.app](https://apca-calculator.netlify.app/)
 

@@ -16,7 +16,7 @@ export default function Explanation() {
           <p className={styles.description}>
             <strong>APCA (Advanced Perceptual Contrast Algorithm)</strong> is
             the modern standard for contrast scoring in WCAG 3. It factors in
-            color perception, background ambient light context, font size, and
+            colour perception, background ambient light context, font size, and
             font weight to determine actual visual readability.
           </p>
 
@@ -34,9 +34,9 @@ export default function Explanation() {
             <div className={styles.metricItem}>
               <dt className={styles.term}>Min Required Lc</dt>
               <dd className={styles.definition}>
-                APCA scales contrast requirements based on typography—thinner or
-                smaller text requires a higher Lc score to remain legible than
-                large or bold text.
+                APCA scales contrast requirements based on typography, thinner
+                or smaller text requires a higher Lc score to remain legible
+                than large or bold text.
               </dd>
             </div>
 
