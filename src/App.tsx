@@ -134,7 +134,10 @@ export default function App() {
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.title}>APCA Calculator</h1>
+      <div className={styles.headerContainer}>
+        <img src="icon-96.png" height={"32px"} />
+        <h1 className={styles.title}>APCA Calculator</h1>
+      </div>
 
       <p>
         Use the controls below to select foreground and background colours, font
@@ -250,6 +253,10 @@ export default function App() {
         style={{
           color: fg,
           backgroundColor: bg,
+          maxHeight: "11rem",
+          overflowX: "auto",
+          whiteSpace: "nowrap",
+          minHeight: "1rem",
         }}
       >
         <p
@@ -286,7 +293,9 @@ export default function App() {
           </div>
 
           <div className={styles.metricRow}>
-            <span className={styles.metricLabel}>Min Required Lc</span>
+            <span className={styles.metricLabel}>
+              Minimum Required Lc For Selected Font Size and Weight
+            </span>
             <span className={styles.metricValueSecondary}>
               {apcaResults?.minRequiredLc ?? "N/A"}
             </span>

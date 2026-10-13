@@ -4,28 +4,35 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <p className={styles.credits}>
-          A pet project created by{" "}
-          <a
-            href="https://damienrobson.co.uk"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.link}
-          >
-            Damien Robson (new tab)
-          </a>
-        </p>
-
         <div className={styles.navLinks}>
           <p className={styles.navLink}>
-            Found this tool useful?{" "}
+            Created by{" "}
+            <a
+              href="https://damienrobson.co.uk"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              Damien Robson
+            </a>
+          </p>
+
+          <p className={styles.navLink}>
+            Colour Swatch Icon by{" "}
+            <a
+              href="https://icons8.com"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              icons8
+            </a>
+          </p>
+          <p className={styles.navLink}>
             <a
               href="https://ko-fi.com/damienrobson"
-              target="_blank"
               rel="noopener noreferrer"
-              className={styles.navLink}
+              className={styles.link}
             >
-              Buy me a coffee! (new tab)
+              Useful? Buy me a coffee!
             </a>
           </p>
         </div>
