@@ -135,7 +135,7 @@ export default function App() {
   return (
     <main className={styles.container}>
       <div className={styles.headerContainer}>
-        <img src="icon-96.png" height={"32px"} />
+        <img alt="" src="icon-96.png" height={"32px"} />
         <h1 className={styles.title}>APCA Calculator</h1>
       </div>
 
@@ -175,6 +175,7 @@ export default function App() {
 
           <div className={`${styles.fieldGroup} ${styles.centre}`}>
             <button
+              className={styles.desktopSwap}
               type="button"
               onClick={swapColours}
               aria-label="Swap foreground and background colours"
@@ -207,6 +208,19 @@ export default function App() {
                 className={`${styles.textInput} ${styles.hexInput}`}
               />
             </div>
+          </div>
+        </div>
+
+        <div className={styles.controlRow}>
+          <div className={`${styles.fieldGroup}`}>
+            <button
+              className={styles.mobileSwap}
+              type="button"
+              onClick={swapColours}
+              aria-label="Swap foreground and background colours"
+            >
+              Swap
+            </button>
           </div>
         </div>
 
@@ -258,6 +272,7 @@ export default function App() {
           whiteSpace: "nowrap",
           minHeight: "1rem",
         }}
+        tabIndex={0}
       >
         <p
           className={styles.previewBody}
@@ -288,7 +303,7 @@ export default function App() {
           <div className={styles.metricRow}>
             <span className={styles.metricLabel}>Lc Score</span>
             <span className={styles.metricValuePrimary}>
-              {apcaResults?.lc ?? "Unable to calculate"}
+              {apcaResults?.lc.toFixed(0) ?? "Unable to calculate"}
             </span>
           </div>
 

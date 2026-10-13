@@ -4,6 +4,14 @@
   border-radius: 0.125rem;
 }
 
+.desktopSwap {
+  display: block;
+}
+
+.mobileSwap {
+  display: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -43,6 +51,7 @@
 }
 
 .controlRow {
+  flex-direction: row;
   display: flex;
   gap: 12px;
 }
@@ -210,6 +219,7 @@ button {
 
 .metricRow {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -217,6 +227,7 @@ button {
 .metricLabel {
   font-size: 0.875rem;
   color: #6b7280;
+  font-weight: 600;
 }
 
 .metricValuePrimary {
@@ -238,4 +249,32 @@ button {
   background-color: #f3f4f6;
   padding: 0.125rem 0.5rem;
   border-radius: 4px;
+}
+
+@media (max-width: 494px) {
+  .controlRow {
+    flex-direction: column;
+  }
+
+  .desktopSwap {
+    display: none;
+  }
+
+  .mobileSwap {
+    display: block;
+  }
+
+  .centre {
+    justify-content: flex-start;
+  }
+
+  .end {
+    align-items: flex-start;
+  }
+
+  .metricRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }
