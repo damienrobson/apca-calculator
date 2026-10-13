@@ -12,15 +12,15 @@ import {
 } from "./helpers";
 
 /**
- * Computes the APCA Lightness Contrast (Lc) value between text and background colors.
+ * Computes the APCA Lightness Contrast (Lc) value between text and background colours.
  * Returns a signed value: positive means dark text on light background; negative means light text on dark background.
  */
 
 export const calcAPCA = (txtColor: string, bgColor: string): number => {
-  // Compute luminance for text color
+  // Compute luminance for text colour
   const txtY = calculateApcaLuminance(txtColor);
 
-  // Compute luminance for background color
+  // Compute luminance for background colour
   const bgY = calculateApcaLuminance(bgColor);
 
   // Return 0 contrast if luminance difference is within sub-visual noise floor

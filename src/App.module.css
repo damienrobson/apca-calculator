@@ -75,13 +75,13 @@ button {
   color: #374151;
 }
 
-.colorInputWrapper {
+.colourInputWrapper {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.colorPicker {
+.colourPicker {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -94,11 +94,11 @@ button {
   background-color: #ffffff;
 }
 
-.colorPicker::-webkit-color-swatch-wrapper {
+.colourPicker::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 
-.colorPicker::-webkit-color-swatch {
+.colourPicker::-webkit-color-swatch {
   border: none;
   border-radius: 4px;
 }

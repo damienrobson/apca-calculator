@@ -137,7 +137,7 @@ export default function App() {
       <h1 className={styles.title}>APCA Calculator</h1>
 
       <p>
-        Use the controls below to select foreground and background colors, font
+        Use the controls below to select foreground and background colours, font
         size, and font weight to check APCA accessibility. Swap the selected
         colours with the Swap button.
       </p>
@@ -148,14 +148,14 @@ export default function App() {
             <label htmlFor="foreground" className={styles.label}>
               Foreground Color
             </label>
-            <div className={styles.colorInputWrapper}>
+            <div className={styles.colourInputWrapper}>
               <input
                 type="color"
                 id="foreground"
                 name="foreground"
                 value={fg}
                 onChange={handleFgPickerChange}
-                className={styles.colorPicker}
+                className={styles.colourPicker}
               />
               <input
                 type="text"
@@ -184,14 +184,14 @@ export default function App() {
             <label htmlFor="background" className={styles.label}>
               Background Color
             </label>
-            <div className={styles.colorInputWrapper}>
+            <div className={styles.colourInputWrapper}>
               <input
                 type="color"
                 id="background"
                 name="background"
                 value={bg}
                 onChange={handleBgPickerChange}
-                className={styles.colorPicker}
+                className={styles.colourPicker}
               />
               <input
                 type="text"

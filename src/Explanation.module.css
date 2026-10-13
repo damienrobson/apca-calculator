@@ -5,15 +5,27 @@
 
 .details {
   border: 1px solid #334155;
-  border-radius: 0.5rem;
+  border-radius: 0rem;
   background-color: #0f172a;
   color: #f8fafc;
   overflow: hidden;
 }
 
+/* .details:first-of-type {
+  border-radius: 0.5rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.details:last-of-type {
+  border-radius: 0.5rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 .details[open] .chevron {
   transform: rotate(180deg);
-}
+} */
 
 .summary {
   display: flex;

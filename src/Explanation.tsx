@@ -8,6 +8,41 @@ export default function Explanation() {
     >
       <details className={styles.details} open>
         <summary id="apca-explanation-heading" className={styles.summary}>
+          <span className={styles.title}>Disclaimer</span>
+          <span className={styles.chevron} aria-hidden="true" />
+        </summary>
+
+        <div className={styles.content}>
+          <p className={styles.description}>
+            This APCA calculator is provided for informational and preliminary
+            design guidance only. While it uses the latest perceptual contrast
+            metrics to help evaluate text readability, final accessibility
+            compliance should always be verified through comprehensive human
+            evaluation, user testing, and adherence to your applicable regional
+            accessibility standards (such as WCAG guidelines). The developer
+            assumes no liability for accessibility audit results or compliance
+            outcomes.
+          </p>
+        </div>
+      </details>
+
+      <details className={styles.details}>
+        <summary id="apca-explanation-heading" className={styles.summary}>
+          <span className={styles.title}>Why did you build this?</span>
+          <span className={styles.chevron} aria-hidden="true" />
+        </summary>
+
+        <div className={styles.content}>
+          <p className={styles.description}>
+            Simple, really. The calculators that were already available didn't
+            meet my needs: they felt overly complex or didn't give me enough
+            granularity. So I built this one.
+          </p>
+        </div>
+      </details>
+
+      <details className={styles.details}>
+        <summary id="apca-explanation-heading" className={styles.summary}>
           <span className={styles.title}>What do these results mean?</span>
           <span className={styles.chevron} aria-hidden="true" />
         </summary>
@@ -26,8 +61,11 @@ export default function Explanation() {
             <div className={styles.metricItem}>
               <dt className={styles.term}>Lc Score (Lightness Contrast)</dt>
               <dd className={styles.definition}>
-                A scale measuring perceived contrast. Higher numbers mean better
-                visual contrast and legibility.
+                A scale measuring perceived contrast. Higher absolute numbers
+                (i.e. the number without the positive/negative sign) mean better
+                visual contrast and legibility. Negative values represent light
+                text on a dark background; they do not indicate issues or
+                problems.
               </dd>
             </div>
 
